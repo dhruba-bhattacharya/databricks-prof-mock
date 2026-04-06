@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock Exam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Mock Exam</h1>
+    <div id="progressText">Question 1 / 45</div>
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+  </header>
+
+  <main id="quiz" class="hidden">
+
+    <div class="card">
+      <pre id="question"></pre>
+      <div id="images"></div>
+    </div>
+
+    <div id="options" class="options"></div>
+
+    <div class="actions">
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    </main>
+
+    <div id="resultScreen" class="hidden">
+
+    <h2>Test Complete</h2>
+
+    <div class="result-summary">
+        <div id="scoreText"></div>
+    </div>
+
+    <div class="result-actions">
+        <button onclick="showReview('wrong')">Review Wrong</button>
+        <button onclick="showReview('correct')">Review Correct</button>
+        <button onclick="goToStart()">Start New Test</button>
+    </div>
+
+    <div id="reviewContainer"></div>
+
+    </div>
+
+  <div class="start-screen">
+    <h2>Start Your Test</h2>
+
+    <div class="mode">
+      <label><input type="radio" name="mode" value="instant" checked> Instant Feedback</label>
+      <label><input type="radio" name="mode" value="end"> Show at End</label>
+    </div>
+
+    <button onclick="startTest()" id="startBtn">Start Test</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
